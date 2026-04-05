@@ -29,3 +29,7 @@ llm-knowledge-bases/outputs/visuals/*.svg
 # Optional local-only app state
 *.sqlite
 *.db
+
+# Local OpenClaw runtime / nested repos
+.openclaw/
+openclaw/
