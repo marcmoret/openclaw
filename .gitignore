@@ -1,0 +1,31 @@
+# Sensitive / personal memory
+memory/
+MEMORY.md
+
+# OpenClaw transient media and runtime noise
+media/
+*.log
+*.tmp
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Node / package noise
+node_modules/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+
+# Knowledge-base generated indexes / heavier transient outputs if desired
+llm-knowledge-bases/raw/_index/
+
+# Optional: generated visuals if large/noisy
+llm-knowledge-bases/outputs/visuals/*.png
+llm-knowledge-bases/outputs/visuals/*.jpg
+llm-knowledge-bases/outputs/visuals/*.svg
+
+# Optional local-only app state
+*.sqlite
+*.db

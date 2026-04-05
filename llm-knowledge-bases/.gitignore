@@ -1,0 +1,6 @@
+raw/_index/
+outputs/visuals/*.png
+outputs/visuals/*.jpg
+outputs/visuals/*.svg
+__pycache__/
+*.pyc
