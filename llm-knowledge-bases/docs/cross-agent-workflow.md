@@ -8,7 +8,7 @@ The shared truth is the repository itself:
 - `raw/`
 - `wiki/`
 - `outputs/`
-- `WIKI-SCHEMA.md`
+- `CLAUDE.md`
 - `wiki/index.md`
 - `wiki/log.md`
 - `docs/claude-handoff.md`
@@ -19,8 +19,8 @@ Do not rely on agent-to-agent chat history as the primary state.
 
 ### 1. Read before acting
 Before substantial work, read:
-1. `WIKI-SCHEMA.md`
-2. `wiki/home.md`
+1. `CLAUDE.md`
+2. `wiki/overview.md`
 3. `wiki/index.md`
 4. `wiki/log.md`
 5. `docs/claude-handoff.md`

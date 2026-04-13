@@ -1,55 +1,61 @@
 # Claude Handoff
 
-Short shared handoff for another agent (especially Claude) working on this project from another machine.
+Short shared handoff for any agent (especially Claude) working on this project from another machine.
 
 ## Read first
 
-1. `WIKI-SCHEMA.md`
-2. `wiki/home.md`
-3. `wiki/index.md`
-4. `wiki/log.md`
-5. this file
+1. `CLAUDE.md` (root of repo)
+2. `wiki/index.md`
+3. `wiki/log.md`
+4. this file
 
 ## What this project is
 
-A schema-driven, Obsidian-fronted, markdown-native knowledge compiler.
+A schema-driven, Obsidian-fronted, markdown-native knowledge compiler shared across multiple computers.
 
 Core model:
-- `raw/` = immutable source material
-- `wiki/` = maintained knowledge layer
+- `raw/` = immutable source material (drop new sources in `raw/inbox/`)
+- `wiki/` = maintained knowledge layer (63 pages as of 2026-04-12)
 - `outputs/` = durable task/query artifacts
+- `docs/` = operational documentation for the project itself
+- `prompts/` = reusable prompts for wiki operations
 
 ## Current architecture stance
 
 - persistent wiki over raw-document RAG
 - single-agent by default for now
 - vectorless retrieval first
-- optional LangExtract for harder ingest cases
-- multi-agent later if scale actually demands it
+- multi-agent later if scale demands it
+- both computers write to the same repo; git is the sync layer
+
+## Current state (2026-04-12)
+
+- **63 wiki pages**: 16 concepts, 6 entities, 1 project (Voxira), 35 sources, 2 analyses, 1 session overview, plus index/log/overview
+- **Major domains**: LLM wiki patterns, multi-agent orchestration, Claude Code ecosystem, healthcare voice agents, speech/STT optimization
+- **Key project**: Voxira — healthcare voice agent on LiveKit with 15+ specialized agents
+- **Recent work**: Full lint pass, broken wikilink cleanup, session mining of 80 Claude Code sessions
+- **Scheduled tasks**: daily auto-ingest (9AM), daily lint (9:30AM), daily session scan (9:45AM)
 
 ## Current priorities
 
 ### Now
-- continue ingesting strong primary sources
-- promote durable insights into concepts/entities/indexes
-- keep `wiki/log.md` updated
-- use `docs/promotion-rules.md` when deciding what enters the wiki
+- continue ingesting new sources dropped in `raw/inbox/`
+- keep wiki cross-linked and healthy (lint regularly)
+- mine new Claude Code sessions for project knowledge
 
 ### Good next moves
 - deepen entity coverage
-- add more concept pages only when the idea recurs across sources
+- add concept pages when ideas recur across sources
 - keep social posts and linked primary artifacts separate
 
 ## Important files
 
-- `WIKI-SCHEMA.md`
-- `wiki/home.md`
-- `wiki/index.md`
-- `wiki/log.md`
-- `wiki/indexes/source-triage.md`
-- `docs/promotion-rules.md`
-- `docs/obsidian-mind-adaptation.md`
-- `outputs/reports/recommended-operating-model.md`
+- `CLAUDE.md` — full schema and conventions
+- `wiki/index.md` — master catalog
+- `wiki/log.md` — chronological operation record
+- `wiki/overview.md` — high-level summary
+- `docs/promotion-rules.md` — when to promote outputs to wiki
+- `docs/cross-agent-workflow.md` — multi-agent coordination rules
 
 ## What not to do
 
@@ -57,8 +63,4 @@ Core model:
 - do not promote every output into the wiki
 - do not collapse commentary posts and primary artifacts into one note
 - do not treat vector search as mandatory yet
-- do not overcomplicate with multi-agent structure before it solves a real problem
-
-## Suggested first task for Claude
-
-Review the current foundational notes and identify the next 2–3 high-value entity or concept pages that would most improve the wiki.
+- do not make structural changes without a log entry

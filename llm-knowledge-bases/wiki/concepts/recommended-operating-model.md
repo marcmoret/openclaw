@@ -1,53 +1,40 @@
 ---
-title: recommended operating model
+title: Recommended Operating Model
 type: concept
-status: active
 created: 2026-04-04
-updated: 2026-04-04
-tags:
-  - operating-model
-  - architecture
-  - workflow
-related:
-  - wiki/source-notes/karpathy-llm-wiki-gist.md
-  - wiki/source-notes/karpathy-project-origin.md
-  - wiki/source-notes/jumperz-post-2040166448492900356.md
-  - wiki/source-notes/dkare1009-post-2039665922185589044.md
+updated: 2026-04-12
+tags: [operating-model, architecture, workflow]
+sources: [karpathy-llm-wiki-gist, karpathy-project-origin, jumperz-multi-agent-post, dkare1009-vectorless-rag-post]
+related: [persistent-knowledge-base, llm-wiki-pattern, vectorless-retrieval, schema-driven-governance, multi-agent-orchestration]
+status: active
 ---
-
-# Recommended operating model
 
 ## Summary
 
-The current evidence base suggests that this project should operate as a schema-driven, Obsidian-fronted, markdown-native knowledge compiler. The best near-term model is a mostly single-agent workflow with immutable raw sources, a maintained wiki, lightweight retrieval, and selective optional tooling for harder ingest cases.
+The project should operate as a schema-driven, Obsidian-fronted, markdown-native knowledge compiler. The best model is a mostly single-agent workflow with immutable raw sources, a maintained wiki, lightweight retrieval, and selective optional tooling for harder ingest cases.
 
-## Key points
+## Key Principles
 
-- the wiki should be the primary knowledge artifact
-- raw sources remain immutable
-- outputs should compound back into the wiki when durable
-- single-agent discipline should come before default multi-agent scale
-- vectorless retrieval should be the default stance at current scale
-- LangExtract should remain optional for difficult ingest, not mandatory everywhere
-- schema and prompt files are first-class implementation assets
+- The wiki is the primary knowledge artifact — not chat history, not raw sources
+- Raw sources remain immutable; the wiki is the compiled derivative layer
+- Outputs should compound back into the wiki when durable
+- Single-agent discipline should come before multi-agent scale
+- [[vectorless-retrieval]] should be the default stance at current scale
+- LangExtract and similar tools remain optional for difficult ingest, not mandatory everywhere
+- Schema and prompt files (CLAUDE.md, prompts/) are first-class implementation assets
 
-## Why it matters
+## Why This Matters
 
-This concept turns the current source synthesis into a durable project stance, so the architecture does not have to be re-argued from scratch every session.
+This concept turns the source synthesis into a durable project stance, so the architecture does not have to be re-argued from scratch every session. New agents entering the project can read this page and understand the current operating posture.
 
-## Related
+## Scaling Path
 
-- [persistent wiki over raw-document RAG](persistent-wiki-over-rag.md)
-- [multi-agent knowledge compilation](multi-agent-knowledge-compilation.md)
-- [vectorless retrieval](vectorless-retrieval.md)
-- [karpathy/llm-wiki gist](../source-notes/karpathy-llm-wiki-gist.md)
+Multi-agent compilation (see [[multi-agent-orchestration]]) should be treated as a later scaling path, not the default starting architecture. The current project is better served by tightening the single-agent wiki-maintenance loop first. When multiple computers or agents contribute, the shared repository acts as the coordination layer — not agent-to-agent chat.
 
-## Sources
+## Related Concepts
 
-- [karpathy/llm-wiki gist](../source-notes/karpathy-llm-wiki-gist.md)
-- [karpathy project origin](../source-notes/karpathy-project-origin.md)
-- [jumperz post 2040166448492900356](../source-notes/jumperz-post-2040166448492900356.md)
-- [dkare1009 post 2039665922185589044](../source-notes/dkare1009-post-2039665922185589044.md)
-- [LLM Wiki architecture screenshot](../source-notes/llm-wiki-architecture-screenshot.md)
-- [breferrari/obsidian-mind](../source-notes/breferrari-obsidian-mind.md)
-- [google/langextract](../source-notes/google-langextract.md)
+- [[persistent-knowledge-base]] — The architectural center: why wiki over RAG
+- [[llm-wiki-pattern]] — The concrete three-layer implementation
+- [[vectorless-retrieval]] — Default retrieval stance at current scale
+- [[schema-driven-governance]] — Schema files as coordination mechanism
+- [[multi-agent-orchestration]] — Future scaling path
