@@ -1,0 +1,14 @@
+{
+  "pending": true,
+  "requestedBy": "Marco",
+  "reason": "Load loopback CDP policy patch and continue browser debugging automatically.",
+  "firstActionAfterReconnect": "Read TASKS.md before anything else.",
+  "secondActionAfterReconnect": "Automatically continue the active browser task without waiting for Marco to prompt.",
+  "postBootChecklist": [
+    "Read TASKS.md before anything else.",
+    "Automatically continue the active browser task without waiting for Marco to prompt.",
+    "Verify /start, /snapshot, /tabs, and Google open for openclaw profile.",
+    "If Google works, test Marco's logged-in X session.",
+    "Report back explicitly after reconnect."
+  ]
+}

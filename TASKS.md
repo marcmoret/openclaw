@@ -32,6 +32,10 @@ Working task list for longer or multi-step work.
 - [ ] `done` Add Karpathy `llm-wiki` gist as a primary source in the knowledge-base project.
 - [ ] `done` Compare the gist against the current scaffold and identify gaps / suggested improvements.
 
+## Active tasks
+
+- [ ] `doing` Execute `BROWSER-RECOVERY-PLAN.md` step by step to rebuild OpenClaw browser control for the managed `openclaw` profile from a clean baseline, then standardize a repeatable X capture workflow through Obsidian Web Clipper. FIRST ACTION AFTER RECONNECT: read `TASKS.md` before anything else. SECOND ACTION AFTER RECONNECT: automatically continue this task without waiting for Marco to prompt again. Notes: stop improvising bundle surgery unless the clean-baseline rebuild still fails; use Google open/tab/snapshot success as the gate before retrying X. Working workflow discovered: open X post in managed `openclaw` profile, focus exact tab, then trigger Obsidian Web Clipper with OS-level `Alt+Shift+O` via `toolbox\send-alt-shift-o.ps1`; pure OpenClaw browser `press` was insufficient for this extension shortcut.
+
 ## Done (recent)
 
 - [x] Temporary TODO flow for m0h/explorax source recovery and JUMPERZ media review completed.
