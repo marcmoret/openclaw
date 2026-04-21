@@ -2,10 +2,10 @@
 title: Claude Code Ecosystem
 type: concept
 created: 2026-04-10
-updated: 2026-04-10
+updated: 2026-04-18
 tags: [claude-code, tooling, automation, agents, memory]
-sources: [zodchiii-post, akshay-pachaar-post, tom-doerr-post, dr-cintas-post, breferrari-obsidian-mind]
-related: [multi-agent-orchestration, mcp]
+sources: [zodchiii-post, akshay-pachaar-post, tom-doerr-post, dr-cintas-post, breferrari-obsidian-mind, anthropic-opus-4-7-best-practices]
+related: [multi-agent-orchestration, mcp, prompting-patterns, schema-driven-governance]
 ---
 
 ## Definition
@@ -53,6 +53,16 @@ zodchiii highlights 8 Claude Code hooks that automate forgotten tasks:
 3. **Task automation**: Hooks trigger maintenance, validation, and reporting
 4. **Memory keeper**: Maintains persistent vault of project knowledge
 
+## Operational Guidance for Newer Claude Code Models
+
+Anthropic's [[anthropic-opus-4-7-best-practices]] source adds an important operating pattern: newer Claude Code models perform best when tasks are framed as delegated engineering work rather than as a long chain of clarifying micro-turns.
+
+Key implications:
+- Front-load the first turn with intent, constraints, acceptance criteria, and relevant file locations.
+- Avoid unnecessary back-and-forth because each user turn adds reasoning overhead.
+- Be explicit if you want aggressive tool use or parallel subagent fan-out, since newer models may reason more and delegate less by default.
+- Defaulting to higher effort settings can improve autonomy, but `xhigh` is positioned as the practical sweet spot rather than `max`.
+
 ## Key Challenges
 
 - Memory persistence across sessions
@@ -69,6 +79,7 @@ zodchiii highlights 8 Claude Code hooks that automate forgotten tasks:
 - [[dr-cintas-everything-claude-code]] — 27-agent production system
 - [[breferrari-obsidian-mind]] — full operating template
 - [[karpathy-skills-plugin]] — behavioral guidelines distributed as a Claude Code plugin (marketplace model)
+- [[anthropic-opus-4-7-best-practices]] — Anthropic's official guidance on prompt shape, effort levels, tool use, and subagent behavior for Opus 4.7 in Claude Code
 
 ## See Also
 

@@ -2,6 +2,15 @@
 
 Chronological record of all wiki operations. Each entry is prefixed for parseability.
 
+## [2026-04-18] ingest | Anthropic Opus 4.7 Claude Code Best Practices
+
+Ingested Anthropic's blog post on best practices for using Opus 4.7 in Claude Code. Captured the article as a raw source, created a source summary page, and updated [[claude-code-ecosystem]] to reflect Anthropic's recommendations around first-turn task framing, reduced interaction count, explicit tool/subagent guidance, and `xhigh` as the practical default effort level.
+
+Pages created: [sources/anthropic-opus-4-7-best-practices]
+Pages updated: [concepts/claude-code-ecosystem, index.md, log.md]
+
+---
+
 ## [2026-04-12] session-scan | Automated Session Scan (no new knowledge)
 
 Automated wiki session scan. Scanned 7 Cowork sessions and 1 JSONL file.

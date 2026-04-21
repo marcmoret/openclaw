@@ -1,6 +1,6 @@
 # Wiki Index
 
-*Last updated: 2026-04-12*
+*Last updated: 2026-04-18*
 
 This index catalogs every page in the wiki. Read this first to find relevant pages before drilling into specifics.
 
@@ -96,6 +96,7 @@ This index catalogs every page in the wiki. Read this first to find relevant pag
 ### Developer Workflows & Tooling
 
 - [[boris-cherny-slash-commands]] — 10 custom Claude Code commands (env-check, orient, preflight, dissect, testmatch, explain-func, refactor-safe, ship, migrate-draft, debt-scan). "Learn then generate" and "guard then execute" patterns. (Web Clipper, 39KB)
+- [[anthropic-opus-4-7-best-practices]] — Anthropic guidance for Opus 4.7 in Claude Code: front-load tasks, minimize user turns, default to xhigh, and explicitly request tool use or subagent fan-out when needed. (Anthropic blog)
 - [[ernesto-software-vibe-coding]] — High-signal prompt for "vibe coding" (LLM-assisted development); foundational pattern for collaborative coding with Claude. (X post)
 - [[ruben-hassid-claude-comparison]] — Tool selection guide: when to use Chat, Code, Cowork, or Projects; most people default to Chat for everything. (X post)
 
